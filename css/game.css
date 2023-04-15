@@ -1,0 +1,128 @@
+:root{
+    --color1 : whiteSmoke;
+    --color2 :  rgba(79, 250, 227, 0.445);
+    --color3: rgb(77, 153, 143);
+    --font: 'Times New Roman', Times, serif;
+}
+
+.btnStyle {
+    list-style-type: none;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url(../img/solitaire\ 3.jpg) no-repeat fixed center/cover;
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+.section1{
+    display: inline;
+    height: 100vh;
+    position: relative;
+   
+}
+
+#tableJeu{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+table{
+    background-image: url(../img/pierre2.jpg);
+    border: 2px solid black;
+    border-radius: 500px;
+
+    padding: 50px;
+
+}
+
+button{
+    width:45px;
+    height: 45px;
+    margin: 12px;
+    border-radius: 100%;
+}
+
+.btnBorderBlue{
+    border-color: blue;
+}
+
+.section2{
+    height: 100vh;
+    right: 0;
+    display: inline;
+    background: rgba(0, 0, 0, 0.329);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    position: relative;
+}
+.section2 p {
+    color: white;
+    font-family: var(--font);
+
+}
+
+.container{
+    padding: 20px;
+}
+
+.container-btn{
+    /* border: 1px solid red; */
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    
+
+}
+.btn{
+    display: block;
+    width: 87%;
+    border: 2px solid transparent;
+    font-size: 19.5px;
+    font-family: var(--font);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5% 1%;
+    text-align: center;
+    background: var(--color3) ;
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(5px);
+    transition:  0.4s;
+}
+.btn:hover{
+    border: 2px solid var(--color2);
+    background: transparent;
+    color: var(--color1);
+    cursor: pointer;
+    outline: none;
+    
+}
+
+@media screen and (max-width: 780px){ 
+    button{
+        width:30px;
+        height: 30px;
+        margin: 8px;
+        border-radius: 100%;
+    }
+}
+@media screen and (max-width: 650px){ 
+    body{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "s1" 
+        "s2" ;
+    }
+    .section1{
+        grid-area: s1;
+    }
+    .section2{
+        grid-area: s2;
+    }  
+}
